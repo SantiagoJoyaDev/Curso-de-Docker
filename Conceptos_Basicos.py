@@ -1,4 +1,4 @@
-print("Conceptos basicos de Docker")
+print("CONCEPTOS BÁSICOS DE DOCKER")
 
 # Docker es una plataforma que permite crear, desplegar y ejecutar aplicaciones en contenedores.
 # Un contenedor es una unidad estandarizada de software que empaqueta el código y todas sus dependencias para que la aplicación se ejecute de manera rápida y confiable en cualquier entorno.
