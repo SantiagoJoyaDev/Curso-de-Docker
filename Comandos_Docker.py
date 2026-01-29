@@ -8,6 +8,12 @@ print("COMANDOS BÁSICOS DE DOCKER")
 # docker ps -a: Muestra todos los contenedores, incluidos los detenidos.
 #docker logs [nombre_contenedor]: Muestra los registros (logs) de un contenedor específico.
 # docker stop [nombre_contenedor]: Detiene un contenedor en ejecución.
+# docker start [nombre_contenedor]: Inicia un contenedor detenido.
+# docker rm [nombre_contenedor]: Elimina un contenedor detenido.
+# docker rm -f [nombre_contenedor]: Fuerza la eliminación de un contenedor en ejecución.
+# docker rmi [nombre_imagen]: Elimina una imagen de Docker del sistema.
+# docker rmi -f [nombre_imagen]: Fuerza la eliminación de una imagen, incluso si hay contenedores asociados.
+# docker ps -s: Muestra el tamaño de los contenedores en ejecución.
 #------------------------------------------------------------------------------------------
 # docker run -d nombre_contenedor: Ejecuta el contenedor en segundo plano (detached mode).
 # docker run -p [puerto_host]:[puerto_contenedor]: Mapea un puerto del host al puerto del contenedor.
@@ -22,3 +28,8 @@ print("COMANDOS BÁSICOS DE DOCKER")
 # docker run --restart=unless-stopped nombre_contenedor: Reinicia el contenedor a menos que se detenga manualmente.
 # docker run --restart=on-failure[:max-retries] nombre_contenedor: Reinicia el contenedor solo si termina con un error, con un número opcional de reintentos.
 # docker run --restart=on-failure:<n> nombre_contenedor: Reinicia el contenedor solo si termina con un error, con un número específico de reintentos.
+# docker exec -it nombre_contenedor /bin/bash: Abre una terminal interactiva dentro de un contenedor en ejecución.
+# docker exec nombre_contenedor ls: Ejecuta un comando (en este caso, 'ls') dentro de un contenedor en ejecución.
+# docker container prune: Elimina todos los contenedores detenidos para liberar espacio.
+# docker image prune -a: Elimina todas las imágenes no utilizadas para liberar espacio.
+# docker search [término_búsqueda]: Busca imágenes en Docker Hub que coincidan con el término de búsqueda proporcionado.
