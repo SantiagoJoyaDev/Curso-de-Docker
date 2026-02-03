@@ -5,6 +5,7 @@ print("CONCEPTOS BÁSICOS DE DOCKER")
 # Docker file: es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker.
 # imagen: Es un archivo o una plantilla que contiene todo lo necesario para ejecutar una aplicación, incluyendo el código, las bibliotecas, las dependencias y el sistema operativo.
 # Docker Hub: es un servicio de registro de imágenes de Docker en la nube que permite a los usuarios almacenar, compartir y distribuir imágenes de Docker.
+# Entrypoint: Es una instrucción en un Dockerfile que define el comando principal que se ejecutará cuando se inicie un contenedor a partir de la imagen.
 
 #------------------------------------------------------------------------------------------
 # Inmutabilidad en la imagenes de Docker: Las imágenes de Docker son inmutables, lo que significa que una vez que se crea una imagen, no se puede modificar. 
