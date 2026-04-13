@@ -13,7 +13,7 @@ print("INSTRUCCIONES BÁSICAS DE DOCKERFILE")
 # vim: Especifica el editor de texto Vim para ser instalado en la imagen. --> vim dockerfile or vim index.html
 # :wq: Comando de Vim para guardar y salir del editor.
 #------------------------------------------------------------------------------------------
-# hacer un enttypoint con un script bash:
+# hacer un entrypoint con un script bash:
 # 1. crear la imagen con docker build -t [nombre_imagen] .
 # 2. crear el contenedor con docker run --name [nombre_contenedor] -d [nombre_imagen]
 # 3. verificar que el contenedor este corriendo con docker ps

@@ -6,7 +6,7 @@ print("COMANDOS BÁSICOS DE DOCKER")
 # docker ps: Muestra los contenedores en ejecución.
 # cntrl + C: Detiene la ejecución de un contenedor en primer plano.
 # docker ps -a: Muestra todos los contenedores, incluidos los detenidos.
-#docker logs [nombre_contenedor]: Muestra los registros (logs) de un contenedor específico.
+# docker logs [nombre_contenedor]: Muestra los registros (logs) de un contenedor específico.
 # docker stop [nombre_contenedor]: Detiene un contenedor en ejecución.
 # docker start [nombre_contenedor]: Inicia un contenedor detenido.
 # docker rm [nombre_contenedor]: Elimina un contenedor detenido.
@@ -33,3 +33,8 @@ print("COMANDOS BÁSICOS DE DOCKER")
 # docker container prune: Elimina todos los contenedores detenidos para liberar espacio.
 # docker image prune -a: Elimina todas las imágenes no utilizadas para liberar espacio.
 # docker search [término_búsqueda]: Busca imágenes en Docker Hub que coincidan con el término de búsqueda proporcionado.
+# docker commit [nombre_contenedor] [nombre_imagen]: Crea una nueva imagen a partir de los cambios realizados en un contenedor específico.
+# docker save -o [archivo.tar] [nombre_imagen]: Guarda una imagen de Docker en un archivo tar para su distribución o respaldo.
+# docker load -i [archivo.tar]: Carga una imagen de Docker desde un archivo tar previamente guardado.
+# docker tag [nombre_imagen] [nuevo_nombre]: Asigna un nuevo nombre o etiqueta a una imagen de Docker existente.
+# docker volume create [nombre_volumen]: Crea un nuevo volumen de Docker para almacenar datos persistentes. 
