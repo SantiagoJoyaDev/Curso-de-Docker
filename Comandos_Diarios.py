@@ -1,73 +1,141 @@
 print("COMANDOS DIARIOS DOCKER -- FLUJODE TRBAJO PROFESIONAL")
+print("ORDEN PROFESIONAL CON VERSIONAMIENTO")
+
+# 🧭 FLUJO ESTRUCTURADO PROFESIONAL (REORDENADO)
 
 # =========================
-# 🔍 1. INSPECCIÓN (SIEMPRE PRIMERO)
+# 📦 1. CREAR PROYECTO (BASE LOCAL)
 # =========================
 
-# docker ps
-# docker ps -a
-# docker images
+# mkdir app-python
+# cd app-python
+
 
 # =========================
-# 🚀 2. PRIMERA VEZ (CREAR Y EJECUTAR)
+# 📄 2. CREAR SCRIPT PYTHON
 # =========================
 
-# mkdir -->Nombre de la carpeta la cual sera el app o proyecto
-# cd ~/app-nginx
-# docker run -d --name web_sepsi(nombre del proyecto) -p 8080:80 nginx(imagen a usar)
+# vim script.py
+
 
 # =========================
-# 🔁 3. USO DIARIO (SIN RECREAR)
+# 📦 3. DEPENDENCIAS
 # =========================
 
-# docker stop web_sepsi
-# docker start web_sepsi
+# vim requirements.txt
+
 
 # =========================
-# 🧱 4. VERSIONADO PROFESIONAL
+# 🐳 4. DOCKERFILE
 # =========================
 
-# docker build -t web_sepsi .
-# docker run -d --name web_v1 -p 8080:80 web_sepsi
+# vim Dockerfile
 
-# nueva versión
-
-# docker build -t web_sepsi .
-# docker run -d --name web_v2 -p 8081:80 web_sepsi
 
 # =========================
-# 🔁 5. ROLLBACK (VOLVER ATRÁS)
+# 🐳 5. BUILD + VERSIONAMIENTO DE IMAGEN
 # =========================
 
-# docker stop web_v2
-# docker start web_v1
+# docker build -t app-python:v1 .
+
+# ✔️ Aquí creas la primera versión de la imagen
+
 
 # =========================
-# 🧪 6. DEBUG / VERIFICACIÓN
+# 🚀 6. CREAR Y EJECUTAR CONTENEDOR (v1)
 # =========================
 
-# docker logs web_sepsi
-# docker exec -it web_sepsi bash
-# docker exec -it web_sepsi cat /usr/share/nginx/html/index.html
+# docker run -d --name app-python-v1 -p 8080:80 test-python:v
+
+# ✔️ Contenedor creado desde la imagen v1
+
 
 # =========================
-# 🧹 7. LIMPIEZA NORMAL
+# 🔁 7. NUEVA VERSIÓN (v2) - MODIFICAR CÓDIGO
 # =========================
 
-# docker rm web_sepsi
-# docker rmi web_sepsi
+# vim script.py
+
 
 # =========================
-# 🔥 8. LIMPIEZA CUANDO HAY CAOS (RESET)
+# 🐳 8. RE-BUILD IMAGEN v2
 # =========================
 
-# docker stop $(docker ps -q)
+# docker build -t app-python:v2 .
+
+
+# =========================
+# 🚀 9. EJECUTAR CONTENEDOR v2
+# =========================
+
+# docker run --name app-python-v2 -d app-python:v2
+
+# 🧹 🐳 DOCKER - COMANDOS DE BORRADO (RESUMEN DESDE 10)
+
+# =========================
+# 10. BORRAR UN CONTENEDOR ESPECÍFICO
+# =========================
+
+# docker rm -f nombre_contenedor
+
+
+# =========================
+# 11. BORRAR TODOS LOS CONTENEDORES
+# =========================
+
 # docker rm -f $(docker ps -aq)
-# docker image prune -a
+
 
 # =========================
-# 🚀 9. REINICIO LIMPIO
+# 12. BORRAR UNA IMAGEN ESPECÍFICA
 # =========================
 
-# cd ~/app-nginx
-# docker run -d --name web_sepsi -p 8080:80 -v $(pwd):/usr/share/nginx/html nginx
+# docker rmi -f nombre-imagen:tag
+
+
+# =========================
+# 13. BORRAR TODAS LAS IMÁGENES
+# =========================
+
+# docker rmi -f $(docker images -q)
+
+
+# =========================
+# 14. LIMPIEZA TOTAL (RECOMENDADO)
+# =========================
+
+# docker system prune -a --volumes -f
+
+
+# =========================
+# 15. BORRAR REDES NO USADAS
+# =========================
+
+# docker network prune -f
+
+
+# =========================
+# 16. BORRAR VOLUMENES
+# =========================
+
+# docker volume prune -f
+
+
+# =========================
+# 🧠 RESUMEN CLAVE
+# =========================
+
+# - rm -f → contenedores
+# - rmi -f → imágenes
+# - system prune → limpieza total del sistema Docker
+
+# =========================
+# 🧠 RESUMEN PROFESIONAL REAL
+# =========================
+
+# 1. Creas carpeta del proyecto
+# 2. Escribes código
+# 3. Construyes imagen (versionada)
+# 4. Ejecutas contenedor desde imagen
+# 5. Modificas código
+# 6. Repetir build + run

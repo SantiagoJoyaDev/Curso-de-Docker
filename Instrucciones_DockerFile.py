@@ -17,7 +17,6 @@ print("INSTRUCCIONES BÁSICAS DE DOCKERFILE")
 # 1. crear la imagen con docker build -t [nombre_imagen] .
 # 2. crear el contenedor con docker run --name [nombre_contenedor] -d [nombre_imagen]
 # 3. verificar que el contenedor este corriendo con docker ps
-# 4. acceder al contenedor con docker exec -it [nombre_contenedor] /bin/bash
 # 5. dentro del contenedor, crear un script bash, por ejemplo: 
 # FROM ALPINE
 # ENTRYPOINT ["echo","Hola"]
