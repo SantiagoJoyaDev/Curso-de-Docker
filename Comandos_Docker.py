@@ -1,4 +1,4 @@
-print("COMANDOS BÁSICOS DE DOCKER")
+print("COMANDOS DOCKER")
 # docker --version: Muestra la versión instalada de Docker en el sistema.
 # docker pull [nombre_imagen]: Descarga una imagen de Docker desde Docker Hub.
 # docker images: Lista todas las imágenes de Docker disponibles localmente en el sistema.
@@ -34,7 +34,34 @@ print("COMANDOS BÁSICOS DE DOCKER")
 # docker image prune -a: Elimina todas las imágenes no utilizadas para liberar espacio.
 # docker search [término_búsqueda]: Busca imágenes en Docker Hub que coincidan con el término de búsqueda proporcionado.
 # docker commit [nombre_contenedor] [nombre_imagen]: Crea una nueva imagen a partir de los cambios realizados en un contenedor específico.
-# docker save -o [archivo.tar] [nombre_imagen]: Guarda una imagen de Docker en un archivo tar para su distribución o respaldo.
-# docker load -i [archivo.tar]: Carga una imagen de Docker desde un archivo tar previamente guardado.
+# docker save -o [archivo.tar] [nombre_imagen]: Guarda una imagen de Docker en un archivo tar para su distribución o respaldo.(exportar una imagen )
+# docker load -i [archivo.tar]: Carga una imagen de Docker desde un archivo tar previamente guardado.(importar una imagen)
 # docker tag [nombre_imagen] [nuevo_nombre]: Asigna un nuevo nombre o etiqueta a una imagen de Docker existente.
 # docker volume create [nombre_volumen]: Crea un nuevo volumen de Docker para almacenar datos persistentes. 
+# docker push [nombre_imagen]: Sube una imagen de Docker a un registro (como Docker Hub) para compartirla con otros usuarios.
+# docker create volume [nombre_volumen]: Crea un nuevo volumen de Docker para almacenar datos persistentes.
+# docker volume ls: Lista todos los volúmenes de Docker disponibles en el sistema.
+# docker volume rm [nombre_volumen]: Elimina un volumen de Docker específico.
+# docker volume prune: Elimina todos los volúmenes no utilizados para liberar espacio.
+# docker volume -f [nombre_volumen]: Forza la eliminación de un volumen, incluso si está en uso por un contenedor.
+#-------------------------------------------------------------------------------------------
+print("COMANDOS DOCKER COMPOSE")
+# docker compose up: Inicia los servicios definidos en un archivo docker-compose.yml.
+# docker compose down: Detiene y elimina los contenedores, redes y volúmenes creados por docker compose up.
+# docker compose build: Construye o reconstruye los servicios definidos en el archivo docker-compose.yml.
+# docker compose logs: Muestra los registros (logs) de los servicios en ejecución.
+# docker compose ps: Muestra el estado de los servicios definidos en el archivo docker-compose.yml.
+# docker compose exec [nombre_servicio] [comando]: Ejecuta un comando dentro de un contenedor de un servicio específico.
+# docker compose scale [nombre_servicio]=[número_replicas]: Escala un servicio a un número específico de réplicas.
+# docker compose restart: Reinicia los servicios definidos en el archivo docker-compose.yml.
+# docker compose stop: Detiene los servicios definidos en el archivo docker-compose.yml sin eliminar los contenedores.
+# docker compose rm: Elimina los contenedores de los servicios definidos en el archivo docker-compose.yml sin detenerlos primero.
+# docker compose config: Valida y muestra la configuración del archivo docker-compose.yml.
+# docker compose pull: Descarga las imágenes necesarias para los servicios definidos en el archivo docker-compose.yml.
+# docker compose push: Sube las imágenes de los servicios definidos en el archivo docker-compose.yml a un registro (como Docker Hub).
+# docker compose version: Muestra la versión instalada de Docker Compose en el sistema.
+# docker compose run [nombre_servicio] [comando]: Ejecuta un comando en un nuevo contenedor de un servicio específico, sin afectar a los contenedores en ejecución.
+# docker compose up -d: Inicia los servicios en segundo plano (detached mode) definidos en el archivo docker-compose.yml.
+# docker compose down --volumes: Detiene y elimina los contenedores, redes y volúmenes creados por docker compose up, incluyendo los volúmenes asociados.
+# docker compose down --rmi all: Detiene y elimina los contenedores, redes y volúmenes creados por docker compose up, incluyendo todas las imágenes asociadas.
+# docker compose -f [archivo_compose.yml] up: Inicia los servicios definidos en un archivo docker-compose.yml específico, lo que permite la creación de redes personalizadas para esos servicios.
