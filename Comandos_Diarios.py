@@ -49,7 +49,7 @@ print("ORDEN PROFESIONAL CON VERSIONAMIENTO")
 # =========================
 # 🚀 9. EJECUTAR CONTENEDOR v2
 # =========================
-# docker run --name app-python-v2 -d app-python:v2
+# docker run --name app-python -d app-python:v2
 
 # 🧹 🐳 DOCKER - COMANDOS DE BORRADO (RESUMEN DESDE 10)
 # =========================
