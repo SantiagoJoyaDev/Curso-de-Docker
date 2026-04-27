@@ -14,6 +14,7 @@ print("DOCKER SWARM")
 # 1. Replicated: Este tipo de servicio crea múltiples réplicas de un contenedor para garantizar la alta disponibilidad y la escalabilidad.
 # 2. Global: Este tipo de servicio asegura que haya una instancia del contenedor en cada nodo del clúster, lo que es útil para servicios que necesitan estar presentes en todos los nodos, como agentes de monitoreo o servicios de registro.
 # 3. Docker Stacks: Permite desplegar aplicaciones completas utilizando archivos de configuración YAML, lo que facilita la gestión de aplicaciones complejas con múltiples servicios.
+
 # para inicializar un clúster de Docker Swarm se puede usar el comando:docker swarm init
 # para unir un nodo al clúster se puede usar el comando:docker swarm join --token [token] [ip_nodo_manager]:2377
 # para crear un servicio en Docker Swarm se puede usar el comando:docker service create --name [nombre_servicio] [imagen]

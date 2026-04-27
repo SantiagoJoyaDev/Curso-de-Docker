@@ -65,3 +65,9 @@ print("COMANDOS DOCKER COMPOSE")
 # docker compose down --volumes: Detiene y elimina los contenedores, redes y volúmenes creados por docker compose up, incluyendo los volúmenes asociados.
 # docker compose down --rmi all: Detiene y elimina los contenedores, redes y volúmenes creados por docker compose up, incluyendo todas las imágenes asociadas.
 # docker compose -f [archivo_compose.yml] up: Inicia los servicios definidos en un archivo docker-compose.yml específico, lo que permite la creación de redes personalizadas para esos servicios.
+# docker buildx build --platform [plataforma] -t [nombre_imagen] .: Construye una imagen de Docker para una plataforma específica utilizando Buildx, lo que permite la creación de imágenes multiplataforma.
+# docker buildx create [nombre_builder]: Crea un nuevo builder de Buildx, lo que permite la construcción de imágenes para múltiples plataformas y arquitecturas.
+# docker compose up --build: Inicia los servicios definidos en el archivo docker-compose.yml y reconstruye las imágenes si es necesario, lo que garantiza que se utilicen las versiones más recientes de las imágenes.
+# docker compose up --force-recreate: Inicia los servicios definidos en el archivo docker-compose.yml y fuerza la recreación de los contenedores, incluso si no ha habido cambios en la configuración o las imágenes, lo que garantiza un entorno limpio y actualizado.
+# docker compose up --no-deps: Inicia un servicio específico sin iniciar sus dependencias, lo que permite ejecutar solo el servicio deseado sin afectar a los servicios relacionados.
+# quickly: docker compose up --scale [nombre_servicio]=[número_replicas]: Escala un servicio a un número específico de réplicas, lo que permite aumentar o disminuir la cantidad de contenedores en ejecución para ese servicio según las necesidades de carga o rendimiento.
